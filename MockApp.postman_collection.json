@@ -1,0 +1,450 @@
+{
+	"info": {
+		"_postman_id": "ba00d31c-47c4-4e81-a9cd-2cef3dcec36a",
+		"name": "MockApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost",
+			"item": [
+				{
+					"name": "REGISTER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "fullName",
+									"value": "Muhammad Ali Mazhuda",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "m.alli9401@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "m.alli9401@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "08januari1994",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ACTIVATE ACCOUNT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "m.alli9401@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "verificationCode",
+									"value": "597793",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/activateAccount",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"activateAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GENERATE VERIFICATION CODE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "m.alli9401@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/sendVerificationCode",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"sendVerificationCode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FORGOT PASSWORD",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "m.alli9401@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/forgotPassword",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"forgotPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RESET PASSWORD FORM",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/resetPassword/?id=1&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTg1Nzk0ODEzfQ.R9EEiN_PSEAKQs2jsAEBA9qllq-PRgx3aZJnDAQUpYY",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"resetPassword",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								},
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTg1Nzk0ODEzfQ.R9EEiN_PSEAKQs2jsAEBA9qllq-PRgx3aZJnDAQUpYY"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RESET PASSWORD",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "m.alli9401@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "newPassword",
+									"value": "08januari1994",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/resetPassword",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"resetPassword"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "heroku",
+			"item": [
+				{
+					"name": "LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "m.alli9401@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "08januari1994",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api-mockapp.herokuapp.com/login",
+							"protocol": "https",
+							"host": [
+								"api-mockapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REGISTER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "fullName",
+									"value": "Muhammad Ali Mazhuda",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "test@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api-mockapp.herokuapp.com/register",
+							"protocol": "https",
+							"host": [
+								"api-mockapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GENERATE VERIFICATION CODE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "m.alli9401@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api-mockapp.herokuapp.com/sendVerificationCode",
+							"protocol": "https",
+							"host": [
+								"api-mockapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"sendVerificationCode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ACTIVATE ACCOUNT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "test@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "verificationCode",
+									"value": "813559",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api-mockapp.herokuapp.com/activateAccount",
+							"protocol": "https",
+							"host": [
+								"api-mockapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"activateAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FORGOT PASSWORD",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "m.alli9401@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api-mockapp.herokuapp.com/forgotPassword",
+							"protocol": "https",
+							"host": [
+								"api-mockapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"forgotPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RESET PASSWORD",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "m.alli9401@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "newPassword",
+									"value": "08januari1994",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api-mockapp.herokuapp.com/resetPassword",
+							"protocol": "https",
+							"host": [
+								"api-mockapp",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"resetPassword"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
